@@ -1,0 +1,175 @@
+<mxfile host="app.diagrams.net" modified="2022-03-01T13:31:08.897Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/98.0.4758.102 Safari/537.36" etag="bTFF9bcLb1lKOF6VDkXi" version="15.9.6" type="github">
+  <diagram id="GmqzAoZg86QITmlLpx2c" name="Page-1">
+    <mxGraphModel dx="1022" dy="441" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="grv5u8bQsqronlKaapmn-39" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="grv5u8bQsqronlKaapmn-1" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="412" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-1" value="Start" style="ellipse;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="350" y="50" width="124" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-9" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="grv5u8bQsqronlKaapmn-6" target="grv5u8bQsqronlKaapmn-8" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-6" value="Problemformulering" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="352" y="260" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-13" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="grv5u8bQsqronlKaapmn-8" target="grv5u8bQsqronlKaapmn-12" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-8" value="Planlægning af tid" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="352" y="350" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-15" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="grv5u8bQsqronlKaapmn-12" target="grv5u8bQsqronlKaapmn-14" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-12" value="pseudokode" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="352" y="440" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-17" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="grv5u8bQsqronlKaapmn-14" target="grv5u8bQsqronlKaapmn-16" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-20" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="grv5u8bQsqronlKaapmn-14" target="grv5u8bQsqronlKaapmn-19" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-22" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="grv5u8bQsqronlKaapmn-14" target="grv5u8bQsqronlKaapmn-21" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-14" value="Deling af opgaver" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="352" y="530" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-24" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="grv5u8bQsqronlKaapmn-16" target="grv5u8bQsqronlKaapmn-23" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-16" value="View" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="352" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-26" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="grv5u8bQsqronlKaapmn-19" target="grv5u8bQsqronlKaapmn-25" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-19" value="Model" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="190" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-28" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="grv5u8bQsqronlKaapmn-21" target="grv5u8bQsqronlKaapmn-27" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-21" value="Controller" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="510" y="620" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-33" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="grv5u8bQsqronlKaapmn-23" target="grv5u8bQsqronlKaapmn-32" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-23" value="Map, menu osv.." style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="352" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-31" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="grv5u8bQsqronlKaapmn-25" target="grv5u8bQsqronlKaapmn-30" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-25" value="Point systemer, zoom osv.." style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="190" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-35" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="grv5u8bQsqronlKaapmn-27" target="grv5u8bQsqronlKaapmn-34" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-27" value="Sammensætte model og view.&amp;nbsp;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="510" y="700" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-42" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="grv5u8bQsqronlKaapmn-30" target="grv5u8bQsqronlKaapmn-41" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-30" value="Opstilning af program" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="190" y="790" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-44" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="grv5u8bQsqronlKaapmn-32" target="grv5u8bQsqronlKaapmn-43" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-32" value="Afbildning af kort" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="352" y="790" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-46" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="grv5u8bQsqronlKaapmn-34" target="grv5u8bQsqronlKaapmn-45" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-34" value="&#xa;&#xa;&lt;span style=&quot;color: rgb(0, 0, 0); font-family: helvetica; font-size: 12px; font-style: normal; font-weight: 400; letter-spacing: normal; text-align: center; text-indent: 0px; text-transform: none; word-spacing: 0px; background-color: rgb(248, 249, 250); display: inline; float: none;&quot;&gt;Opstilning af program&lt;/span&gt;&#xa;&#xa;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="510" y="790" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-40" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="grv5u8bQsqronlKaapmn-3" target="grv5u8bQsqronlKaapmn-6" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-3" value="Ide til program" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="352" y="170" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-48" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="grv5u8bQsqronlKaapmn-41" target="grv5u8bQsqronlKaapmn-47" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-41" value="Zoom funktion (billede og kort)" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="190" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-50" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="grv5u8bQsqronlKaapmn-43" target="grv5u8bQsqronlKaapmn-49" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-43" value="Billeder fra steder på skolen" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="352" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-52" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="grv5u8bQsqronlKaapmn-45" target="grv5u8bQsqronlKaapmn-51" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-45" value="Få kortet inkorporeret i programmet." style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="510" y="880" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-58" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="grv5u8bQsqronlKaapmn-47" target="grv5u8bQsqronlKaapmn-56" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="250" y="1250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-47" value="Point system" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="190" y="970" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-59" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" parent="1" source="grv5u8bQsqronlKaapmn-49" target="grv5u8bQsqronlKaapmn-56" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="412" y="1210" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-49" value="Scoreboard" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="352" y="970" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-54" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" parent="1" source="grv5u8bQsqronlKaapmn-51" target="grv5u8bQsqronlKaapmn-53" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-51" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 12px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;Få zoom funktionen inkorporeret i programmet.&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="510" y="970" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-57" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="grv5u8bQsqronlKaapmn-53" target="grv5u8bQsqronlKaapmn-56" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="570" y="1250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-53" value="&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;helvetica&amp;#34; ; font-size: 12px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-align: center ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(248 , 249 , 250) ; display: inline ; float: none&quot;&gt;Få point system, scoreboard og billeder inkorporeret i programmet.&lt;/span&gt;" style="whiteSpace=wrap;html=1;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="510" y="1060" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-62" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1.097;entryY=0.331;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="grv5u8bQsqronlKaapmn-56" target="grv5u8bQsqronlKaapmn-14" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="710" y="540" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="710" y="1240" />
+              <mxPoint x="710" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-56" value="Test" style="rounded=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="352" y="1210" width="120" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="grv5u8bQsqronlKaapmn-61" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" parent="1" source="grv5u8bQsqronlKaapmn-56" target="grv5u8bQsqronlKaapmn-56" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
