@@ -45,6 +45,7 @@ void mousePressed() {
     int rod = int(sqrt(under_rods_gutten));    
     
     int score = 500 - rod;
+    if(score < 0)score = 0; 
     println("Din score er "+score);
   }
 }
