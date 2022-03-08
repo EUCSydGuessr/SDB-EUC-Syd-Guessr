@@ -3,9 +3,6 @@ int musy = 0;
 int forskelx = 0;
 int forskely = 0;
 
-
-
-
 int realx = 577;
 int realy = 253;
 
@@ -46,6 +43,7 @@ void mousePressed() {
     
     int score = 500 - rod;
     if(score < 0)score = 0; 
+   
     println("Din score er "+score);
   }
 }
