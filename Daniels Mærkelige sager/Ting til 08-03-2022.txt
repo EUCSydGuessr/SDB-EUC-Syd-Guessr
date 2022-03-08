@@ -1,0 +1,1 @@
+Brugen af libraries der bliver refereret i Processing..... Map zoom/image zoom.

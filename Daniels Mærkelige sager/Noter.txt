@@ -1,0 +1,27 @@
+Mappet kan bygges op af flere eller få billeder. Derved kan man opnå flere pixels kan udregens. 
+
+
+Lav et program, der tager et tilfældigt tal fra billed 0-værdi til max-værdi.
+
+Denne værdi gemmes som en int og bruges så til at finde billedet der matcher. Koordinatlisten loades og der søges en String, hvor den første Char svarer til det tilfældige tal som er gemt. Derved er både koordinater og billed gemt sammen på en måde hvor de matcher hinanden.
+
+
+
+Brug vektor regning /
+y2-y1 = deltay
+x2-x1 = deltax
+
+Kvadratroden af (deltax i anden + deltay i anden.) = 
+
+til beregning af afstand mellem to punkter. 
+
+Se om Værdierne på en eller anden måde kan stemmes overens med meter.
+
+
+Classes til at definere billedkoordinater
+
+
+ControlP5 library og Unfolding Maps library.
+
+Muligvis inddele kortet i kvadranter. 
+
