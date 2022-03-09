@@ -25,3 +25,5 @@ ControlP5 library og Unfolding Maps library.
 
 Muligvis inddele kortet i kvadranter. 
 
+
+I scoreprogrammet kunne man bruge et highscore table, ved at have en .txt fil som loades og sorteres hver gang et nyt spil startes. Kan man nemt tilføje en form for brugernavn eller spillernummer, så ville det være fint. 
