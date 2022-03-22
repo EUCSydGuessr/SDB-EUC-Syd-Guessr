@@ -6,7 +6,6 @@ int forskely = 0;
 int realx = 577;
 int realy = 253;
 
-
 void setup() {
   size(1280, 720);
 }
@@ -40,10 +39,10 @@ void mousePressed() {
     }
     int under_rods_gutten = int(pow(forskelx, 2)) + int(pow(forskely, 2));
     int rod = int(sqrt(under_rods_gutten));    
-    
+
     int score = 500 - rod;
-    if(score < 0)score = 0; 
-   
+    if (score < 0)score = 0; 
+
     println("Din score er "+score);
   }
 }
