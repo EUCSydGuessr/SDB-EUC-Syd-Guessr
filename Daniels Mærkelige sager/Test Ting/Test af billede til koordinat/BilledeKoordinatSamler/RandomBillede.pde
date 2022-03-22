@@ -1,18 +1,3 @@
-
-
-RandomBillede gang1 = new RandomBillede(80,100,"Gang1.jpg");
-
-
-
-void setup(){
-  gang1.getImage();
-  gang1.drawIMG();
-}
-void draw(){
-  
-}
-
-
 class RandomBillede {
   int xbillede;
   int ybillede;
