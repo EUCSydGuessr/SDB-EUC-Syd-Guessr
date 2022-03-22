@@ -26,4 +26,4 @@ ControlP5 library og Unfolding Maps library.
 Muligvis inddele kortet i kvadranter. 
 
 
-Copy() til at tage et billede af det store. Gøre dette til billedet. Copy'en skal gemmes, således at man altså ikke ændrer den normale billedfil. Så kan man slette billedet i toppen hver eneste gang man Zoomer ud... (Kig på "First In First out"-princip).s 
+I scoreprogrammet kunne man bruge et highscore table, ved at have en .txt fil som loades og sorteres hver gang et nyt spil startes. Kan man nemt tilføje en form for brugernavn eller spillernummer, så ville det være fint. 
