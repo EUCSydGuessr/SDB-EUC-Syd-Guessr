@@ -16,7 +16,9 @@ void draw(){
   fill(7,126,218);
   rect(100, 550, 550, 100, 48, 48, 48, 48);
   
-  fill(255)
+  fill(255);
   String str = "Geuss";
-  text(str, 40, 40, 280, 320);
+  textSize(100);
+  textAlign(CENTER,CENTER);
+  text(str, 200, 530, 350, 120);
 }
