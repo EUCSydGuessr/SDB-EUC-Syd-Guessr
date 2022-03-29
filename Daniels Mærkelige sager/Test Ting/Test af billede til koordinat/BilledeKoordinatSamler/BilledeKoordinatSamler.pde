@@ -1,7 +1,5 @@
 
-
 RandomBillede gang1;
-
 
 
 void setup() {
@@ -28,7 +26,7 @@ void draw() {
   textAlign(CENTER, CENTER);
   text(str, 200, 530, 350, 120);
 
- PImage kort = loadImage("kortOverSkole.jpg");
+  PImage kort = loadImage("kortOverSkole.jpg");
   image(kort, 0, 0);
 
   gang1.drawIMG();
