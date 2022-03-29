@@ -6,7 +6,7 @@ void setup() {
   size(1920, 1080);
   background(253, 255, 218);
 
-  gang1 = new RandomBillede(80, 100, 2, "Gang1.jpg");
+  gang1 = new RandomBillede(100, 120, 2, "Gang1.jpg");
 }
 
 void draw() {
@@ -27,7 +27,7 @@ void draw() {
   text(str, 200, 530, 350, 120);
 
   PImage kort = loadImage("kortOverSkole.jpg");
-  image(kort, 0, 0);
+  image(kort, 750, 0);
 
   gang1.drawIMG();
 }
@@ -49,6 +49,6 @@ class RandomBillede {
   }
 
   void drawIMG() {
-    image(billedeIMG, 0, 0);
+    image(billedeIMG, 100,75 );
   }
 }
