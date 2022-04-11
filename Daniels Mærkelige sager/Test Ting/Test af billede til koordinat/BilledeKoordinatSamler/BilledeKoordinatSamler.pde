@@ -1,17 +1,17 @@
 
-RandomBillede pic1, pic2;
-String billedeNummer = "pic"+int(random(1,3));
+RandomBillede pic1, pic2, pic3;
+int q = 0;
+int x = 0;
+int y = 0;
 
 void setup() {
   size(1920, 1080);
   background(253, 255, 218);
 
-  
-  println(billedeNummer); 
 
   pic1 = new RandomBillede(739, 276, 2, "Gang1.jpg");
   pic2 = new RandomBillede(502, 173, 2, "KantineTop.jpg");
-  
+  pic3 = new RandomBillede(670, 296, 0, "ValleRadio.jpg");
 }
 
 void draw() {
@@ -35,10 +35,33 @@ void draw() {
   image(kort, 0, 0);
 
 
-  //image();
-  pic2.drawIMG();
+  while (q <= 0) {
+    q = q + int(random(1, 4));
+    println("Billedet der er valgt er "+q);
+  }
+
+  if (q == 1) {
+    pic1.drawIMG(); 
+    x = pic1.xbillede;
+    y = pic1.ybillede;
+  } else if (q == 2) {
+    pic2.drawIMG(); 
+    x = pic2.xbillede;
+    y = pic2.ybillede;
+  } else if (q == 3) {
+    pic3.drawIMG(); 
+    x = pic3.xbillede;
+    y = pic3.ybillede;
+  } 
+
+  println(x+" og "+y);
 }
 
+ void keyReleased(){
+    if (key == BACKSPACE) {
+      q = q-4;
+    }
+  }
 
 class RandomBillede {
   int xbillede;
