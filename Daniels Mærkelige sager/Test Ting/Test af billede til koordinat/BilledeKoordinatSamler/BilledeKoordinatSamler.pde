@@ -1,6 +1,8 @@
 
-RandomBillede pic1, pic2, pic3;
+RandomBillede pic1, pic2, pic3, pic4, pic5, pic6;
 int q = 0;
+int pStop = 0,p1 = 99,p2 = 99,p3 = 99,p4 = 99;
+
 int x = 0;
 int y = 0;
 
@@ -8,10 +10,12 @@ void setup() {
   size(1920, 1080);
   background(253, 255, 218);
 
-
   pic1 = new RandomBillede(739, 276, 2, "Gang1.jpg");
   pic2 = new RandomBillede(502, 173, 2, "KantineTop.jpg");
   pic3 = new RandomBillede(670, 296, 0, "ValleRadio.jpg");
+  pic4 = new RandomBillede(733, 308, 1, "1steGLokale.jpg");
+  pic5 = new RandomBillede(674, 313, 2, "IbKlasseTing.jpg");
+  pic6 = new RandomBillede(606, 267, 2, "nilsIKlasse2G.jpg");
 }
 
 void draw() {
@@ -35,9 +39,14 @@ void draw() {
   image(kort, 0, 0);
 
 
-  while (q <= 0) {
-    q = q + int(random(1, 4));
-    println("Billedet der er valgt er "+q);
+  while (q <= 0 & pStop <= 4) {
+    q = q + int(random(1, 7));
+    if (q == p1) q = 0;
+    if (q == p2) q = 0;
+    if (q == p3) q = 0;
+    if (q == p4) q = 0;
+    
+    println("Billedet der er valgt er "+q+" og p er "+p1+" "+p2+" "+p3+" "+p4);
   }
 
   if (q == 1) {
@@ -52,16 +61,35 @@ void draw() {
     pic3.drawIMG(); 
     x = pic3.xbillede;
     y = pic3.ybillede;
+  } else if (q == 4) {
+    pic4.drawIMG(); 
+    x = pic4.xbillede;
+    y = pic4.ybillede;
+  } else if (q == 5) {
+    pic5.drawIMG(); 
+    x = pic5.xbillede;
+    y = pic5.ybillede;
+  } else if (q == 6) {
+    pic6.drawIMG(); 
+    x = pic6.xbillede;
+    y = pic6.ybillede;
   } 
 
-  println(x+" og "+y);
+  //println(x+" og "+y);
 }
 
- void keyReleased(){
-    if (key == BACKSPACE) {
-      q = q-4;
-    }
+void keyReleased() {
+  if (key == BACKSPACE) {
+    if(p1 == 99) p1 = q;
+    else if(p2 == 99) p2 = q;
+    else if(p3 == 99) p3 = q;
+    else if(p4 == 99) p4 = q;
+    
+    q = 0;
+    pStop = pStop + 1;
   }
+}
+
 
 class RandomBillede {
   int xbillede;
