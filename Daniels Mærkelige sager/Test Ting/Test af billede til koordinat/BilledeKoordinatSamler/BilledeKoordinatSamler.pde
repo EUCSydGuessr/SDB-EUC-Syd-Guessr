@@ -1,12 +1,17 @@
 
-RandomBillede gang1;
-
+RandomBillede pic1, pic2;
+String billedeNummer = "pic"+int(random(1,3));
 
 void setup() {
   size(1920, 1080);
   background(253, 255, 218);
 
-  gang1 = new RandomBillede(80, 100, 2, "Gang1.jpg");
+  
+  println(billedeNummer); 
+
+  pic1 = new RandomBillede(739, 276, 2, "Gang1.jpg");
+  pic2 = new RandomBillede(502, 173, 2, "KantineTop.jpg");
+  
 }
 
 void draw() {
@@ -29,7 +34,9 @@ void draw() {
   PImage kort = loadImage("kortOverSkole.jpg");
   image(kort, 0, 0);
 
-  gang1.drawIMG();
+
+  //image();
+  pic2.drawIMG();
 }
 
 
