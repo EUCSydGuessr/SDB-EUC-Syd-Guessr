@@ -3,7 +3,11 @@ import controlP5.*;
 ControlP5 cp5;
 
 String etage = "Stuetage";
+PImage imgkaelder,imgstue,img1ste;
 
+imgkaelder = loadImage(".jpg");
+imgstue = loadImage(".jpg");
+img1ste = = loadImage(".jpg");
 
 Button Knap1Setting;
 Button Knap2Setting;
@@ -15,13 +19,10 @@ void setup() {
   size(1024, 580);
   background(111);
   
+  
+  
   cp5 = new ControlP5(this);
   //Initieringsfis tror jeg 
-
-  // replace the default controlP5 button with an image.
-  // button.setImages(defaultImage, rolloverImage, pressedImage);
-  // use button.updateSize() to adjust the size of the button and 
-  // resize to the dimensions of the defaultImage
 
   Knap1Setting = cp5.addButton("Knap1").setPosition(175, 275).setColorBackground(#060a80).setColorActive(#252dfa).updateSize();
 
@@ -35,16 +36,14 @@ void draw() {
 
   println(etage);
   
-  //if()
 }
 
-// function Knap1 will receive changes from 
-// controller with name Knap1
+
 public void Knap1() {
   println("1ste knap pressed");
   
   etage = "Kælder";
-  
+  image(imgkaelder,)
   
   Knap1Setting.setColorBackground(#252dfa);
   Knap2Setting.setColorBackground(#060a80);
@@ -58,6 +57,7 @@ public void Knap2() {
   
   etage = "Stuetage";
   
+  
   Knap2Setting.setColorBackground(#252dfa);
   Knap1Setting.setColorBackground(#060a80);
   Knap3Setting.setColorBackground(#060a80);
@@ -67,6 +67,7 @@ public void Knap3() {
   println("3dje knap pressed ");
   
   etage = "1ste sal";
+  
   
   Knap3Setting.setColorBackground(#252dfa);
   Knap1Setting.setColorBackground(#060a80);
