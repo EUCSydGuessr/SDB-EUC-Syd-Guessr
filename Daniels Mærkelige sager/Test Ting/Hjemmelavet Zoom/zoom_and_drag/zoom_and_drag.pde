@@ -2,10 +2,10 @@
 PImage schoolMap;
 
 //imageMode(CENTER)
-float picPreDragX = 1335, picPreDragY = 540;
+//float picPreDragX = 1335, picPreDragY = 540;
 
 //imageMode(CORNER)
-//float picPreDragX = 750, picPreDragY = 237;
+float picPreDragX = 750, picPreDragY = 237;
 
 float picPostDragX, picPostDragY;
 
@@ -27,7 +27,7 @@ void draw() {
   fill (255);
   rect(750, 0, 1920-750, 1080);
 
-  imageMode(CENTER);
+  imageMode(CORNER);
   image(schoolMap, picPreDragX, picPreDragY, 1200*zoomAmount, 607*zoomAmount);
 
   fill(253, 255, 218);
