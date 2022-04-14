@@ -23,7 +23,7 @@ imgkaelder = loadImage("kaelder.jpg");
 imgstue = loadImage("stueetage.jpg");
 img1ste = loadImage("1ste.jpg");
 
-image(imgstue,291,19);
+image(imgstue,150,265);
   
   
   
@@ -49,7 +49,7 @@ public void Knap1() {
   println("1ste knap pressed");
   
   etage = "Kælder";
-  image(imgkaelder,291,19);
+  image(imgkaelder,150,265);
   
   Knap1Setting.setColorBackground(#252dfa);
   Knap2Setting.setColorBackground(#060a80);
@@ -62,7 +62,7 @@ public void Knap2() {
   println("2nden knap pressed ");
   
   etage = "Stuetage";
-  image(imgstue,291,19);
+  image(imgstue,150,265);
   
   Knap2Setting.setColorBackground(#252dfa);
   Knap1Setting.setColorBackground(#060a80);
@@ -73,7 +73,7 @@ public void uwu_NILS() {
   println("NILS ER PÅ SKÆRMEN");
   
   etage = "NILS' sal";
-  image(img1ste,291,19);
+  image(img1ste,150,265);
   
   Knap3Setting.setColorBackground(#252dfa);
   Knap1Setting.setColorBackground(#060a80);

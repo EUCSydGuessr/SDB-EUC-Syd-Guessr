@@ -27,3 +27,12 @@ Muligvis inddele kortet i kvadranter.
 
 
 I scoreprogrammet kunne man bruge et highscore table, ved at have en .txt fil som loades og sorteres hver gang et nyt spil startes. Kan man nemt tilføje en form for brugernavn eller spillernummer, så ville det være fint. 
+
+REMEMBER MODELX OG MODELY.... Potentiel zoom fikser... tror jeg. 
+
+Knapper, som zoomer. Man trykker på et område og dette er området der fokuseres. 
+
+Panning kan skabes med float offset.
+
+Der skal tages hensyn til at klik og drag ikke forstyrrer hinanden.
+

@@ -5,7 +5,7 @@ float zoom = 0.5;
 
 void setup() {
   size(640, 360);
-  img0 = loadImage("neon.jpg");  // Load the image into the program
+  img0 = loadImage("kortOverSkole.jpg");  // Load the image into the program
   img=img0.copy();
   img.resize((int)(zoom*img.width), (int)(zoom*img.height) );
   println("use mouseWheel and press key [z]");
@@ -24,6 +24,6 @@ void mouseWheel(MouseEvent event) {
     if (zoom > 5) zoom = 5;
     println(" key z: zoom "+zoom);
     img=img0.copy();
-    //img.resize((int)(zoom*img.width), (int)(zoom*img.height) );
+    img.resize((int)(zoom*img.width), (int)(zoom*img.height) );
   }
 }
