@@ -3,11 +3,14 @@ int musy = 0;
 int forskelx = 0;
 int forskely = 0;
 
-int realx = 577;
+int realx = ;
 int realy = 253;
 
 void setup() {
-  size(1280, 720);
+  size(1200, 607);
+
+  PImage kort = loadImage("kortOverSkole.jpg");
+  image(kort, 0, 0);
 }
 
 void draw() {
