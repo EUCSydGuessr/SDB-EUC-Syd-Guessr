@@ -1,0 +1,114 @@
+
+RandomBillede pic1, pic2, pic3, pic4, pic5, pic6;
+int q = 0;
+int pStop = 0,p1 = 99,p2 = 99,p3 = 99,p4 = 99;
+
+int x = 0;
+int y = 0;
+
+void setup() {
+  size(1920, 1080);
+  background(253, 255, 218);
+
+<<<<<<< HEAD
+  pic1 = new RandomBillede(739, 276, 2, "Gang1.jpg");
+  pic2 = new RandomBillede(502, 173, 2, "KantineTop.jpg");
+  pic3 = new RandomBillede(670, 296, 0, "ValleRadio.jpg");
+  pic4 = new RandomBillede(733, 308, 1, "1steGLokale.jpg");
+  pic5 = new RandomBillede(674, 313, 2, "IbKlasseTing.jpg");
+  pic6 = new RandomBillede(606, 267, 2, "nilsIKlasse2G.jpg");
+>>>>>>> ddf291228c9f47256bc80aa45889dc0a10ed5f1d
+}
+
+void draw() {
+  stroke(255);
+  fill (255);
+  rect(50, 50, 650, 450);
+  rect(750, 0, 1920-750, 1080);
+
+
+  stroke(7, 126, 218);
+  fill(7, 126, 218);
+  rect(100, 550, 550, 100, 48, 48, 48, 48);
+
+  fill(255);
+  String str = "Guess";
+  textSize(100);
+  textAlign(CENTER, CENTER);
+  text(str, 200, 530, 350, 120);
+
+  PImage kort = loadImage("kortOverSkole.jpg");
+  image(kort, 750, 0);
+
+
+  while (q <= 0 & pStop <= 4) {
+    q = q + int(random(1, 7));
+    if (q == p1) q = 0;
+    if (q == p2) q = 0;
+    if (q == p3) q = 0;
+    if (q == p4) q = 0;
+    
+    println("Billedet der er valgt er "+q+" og p er "+p1+" "+p2+" "+p3+" "+p4);
+  }
+
+  if (q == 1) {
+    pic1.drawIMG(); 
+    x = pic1.xbillede;
+    y = pic1.ybillede;
+  } else if (q == 2) {
+    pic2.drawIMG(); 
+    x = pic2.xbillede;
+    y = pic2.ybillede;
+  } else if (q == 3) {
+    pic3.drawIMG(); 
+    x = pic3.xbillede;
+    y = pic3.ybillede;
+  } else if (q == 4) {
+    pic4.drawIMG(); 
+    x = pic4.xbillede;
+    y = pic4.ybillede;
+  } else if (q == 5) {
+    pic5.drawIMG(); 
+    x = pic5.xbillede;
+    y = pic5.ybillede;
+  } else if (q == 6) {
+    pic6.drawIMG(); 
+    x = pic6.xbillede;
+    y = pic6.ybillede;
+  } 
+
+  //println(x+" og "+y);
+}
+
+void keyReleased() {
+  if (key == BACKSPACE) {
+    if(p1 == 99) p1 = q;
+    else if(p2 == 99) p2 = q;
+    else if(p3 == 99) p3 = q;
+    else if(p4 == 99) p4 = q;
+    
+    q = 0;
+    pStop = pStop + 1;
+  }
+}
+
+
+class RandomBillede {
+  int xbillede;
+  int ybillede;
+  int etageTal; //Kælder = 0, Stue = 1, 1. Sal = 2
+  String billede;
+  PImage billedeIMG;
+
+  RandomBillede(int xbillede, int ybillede, int etageTal, String billede) {
+    this.xbillede = xbillede;
+    this.ybillede = ybillede;
+    this.etageTal = etageTal;
+    this.billedeIMG = loadImage(billede);
+    this.billede = billede;
+  }
+
+  void drawIMG() {
+    image(billedeIMG, 100,75 );
+  }
+}
