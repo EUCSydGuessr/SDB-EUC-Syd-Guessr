@@ -14,6 +14,12 @@ float zoomAmount = 1.0;
 boolean insideGuessField = false;
 
 
+
+
+// TEST AFDELING din hore
+float q, stoer1, stoer2, forhold, diff ;
+
+
 void setup() {
   size(1920, 1080);
   background(253, 255, 218);
@@ -48,7 +54,17 @@ void draw() {
   textAlign(CENTER, CENTER);
   text(guessButton, 200, 530, 350, 120);
 
+  q = picPreDragX + 1200;
 
+  stoer1 = q - mouseX;
+  stoer2 = picPreDragX + mouseX;
+
+  forhold = stoer2/stoer1;
+
+  
+  
+  println(forhold);
+  //println(mouseX-750);
 
   if (mouseX > 750 && mouseY > 0 && mouseX < 1920 && mouseY < 1080) {
     insideGuessField = true;
@@ -67,27 +83,34 @@ void mouseDragged() {
   }
 }
 
-void mouseWheel(MouseEvent spin){
+void mouseWheel(MouseEvent spin) {
   float e = spin.getCount();
   boolean borderMin = false, borderMax = false;
-  
+
   e = (e / 10)*2.5;
-  
-  if(zoomAmount == 0.75) borderMin = true;
-  else if(zoomAmount == 4.0) borderMax = true;
-  else{
-  borderMin = false;
-  borderMax = false;
+
+  if (zoomAmount == 0.75) borderMin = true;
+  else if (zoomAmount == 4.0) borderMax = true;
+  else {
+    borderMin = false;
+    borderMax = false;
   }
-  
-  if(zoomAmount >= 0.75 && zoomAmount <= 4.0){
-    if(!borderMin && !borderMax)zoomAmount = zoomAmount + e;
-    else if(borderMin && e > 0.0)zoomAmount = zoomAmount + e;
-    else if(borderMax && e < 0.0)zoomAmount = zoomAmount + e;
+
+  if (zoomAmount >= 0.75 && zoomAmount <= 4.0) {
+    if (!borderMin && !borderMax) {
+      zoomAmount = zoomAmount + e;
+      picPreDragX = diff;
+    } else if (borderMin && e > 0.0) {
+      zoomAmount = zoomAmount + e;
+      picPreDragX = diff;
+    } else if (borderMax && e < 0.0) {
+      zoomAmount = zoomAmount + e;
+      picPreDragX = diff;
     }
-    
-   
-  
+  }
+
+
+
   println(e);
   println(zoomAmount);
 }
