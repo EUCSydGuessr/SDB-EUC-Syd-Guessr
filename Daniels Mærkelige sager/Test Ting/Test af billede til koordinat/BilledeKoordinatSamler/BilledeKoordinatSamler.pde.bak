@@ -10,14 +10,14 @@ void setup() {
   size(1920, 1080);
   background(253, 255, 218);
 
-
+<<<<<<< HEAD
   pic1 = new RandomBillede(739, 276, 2, "Gang1.jpg");
   pic2 = new RandomBillede(502, 173, 2, "KantineTop.jpg");
   pic3 = new RandomBillede(670, 296, 0, "ValleRadio.jpg");
   pic4 = new RandomBillede(733, 308, 1, "1steGLokale.jpg");
   pic5 = new RandomBillede(674, 313, 2, "IbKlasseTing.jpg");
   pic6 = new RandomBillede(606, 267, 2, "nilsIKlasse2G.jpg");
-
+>>>>>>> ddf291228c9f47256bc80aa45889dc0a10ed5f1d
 }
 
 void draw() {

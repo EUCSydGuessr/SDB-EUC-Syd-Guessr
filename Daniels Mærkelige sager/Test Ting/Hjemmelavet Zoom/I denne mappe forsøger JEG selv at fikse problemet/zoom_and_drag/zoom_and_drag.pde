@@ -51,6 +51,10 @@ void draw() {
   textAlign(CENTER, CENTER);
   text(guessButton, 200, 530, 350, 120);
 
+  q = picPreDragX + 1200;
+
+  stoer1 = q - mouseX;
+  stoer2 = picPreDragX + mouseX;
 
   if (mouseX > 750 && mouseY > 0 && mouseX < 1920 && mouseY < 1080) {
     insideGuessField = true;
