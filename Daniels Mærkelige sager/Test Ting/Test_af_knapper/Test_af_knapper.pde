@@ -3,11 +3,11 @@ import controlP5.*;
 ControlP5 cp5;
 
 String etage = "Stuetage";
-PImage imgkaelder;
+PImage imgEtagebillede;
 PImage imgstue;
 PImage img1ste;
 
-
+String bobo = "stueetage";
 
 Button Knap1Setting;
 Button Knap2Setting;
@@ -19,11 +19,7 @@ void setup() {
   size(1024, 580);
   background(111);
   
-imgkaelder = loadImage("kaelder.jpg");
-imgstue = loadImage("stueetage.jpg");
-img1ste = loadImage("1ste.jpg");
 
-image(imgstue,150,265);
   
   
   
@@ -42,14 +38,20 @@ void draw() {
 
   println(etage);
   
+ imgEtagebillede = loadImage(bobo+".jpg");
+
+image(imgEtagebillede,150,265);
+  
 }
 
 
 public void Knap1() {
   println("1ste knap pressed");
   
+  bobo = "kaelder";
+  
   etage = "Kælder";
-  image(imgkaelder,150,265);
+  //image(imgkaelder,150,265);
   
   Knap1Setting.setColorBackground(#252dfa);
   Knap2Setting.setColorBackground(#060a80);
@@ -61,8 +63,10 @@ public void Knap1() {
 public void Knap2() {
   println("2nden knap pressed ");
   
+  bobo = "stueetage";
+  
   etage = "Stuetage";
-  image(imgstue,150,265);
+  //image(imgstue,150,265);
   
   Knap2Setting.setColorBackground(#252dfa);
   Knap1Setting.setColorBackground(#060a80);
@@ -72,8 +76,10 @@ public void Knap2() {
 public void uwu_NILS() {
   println("NILS ER PÅ SKÆRMEN");
   
+  bobo = "1ste";
+  
   etage = "NILS' sal";
-  image(img1ste,150,265);
+  //image(img1ste,150,265);
   
   Knap3Setting.setColorBackground(#252dfa);
   Knap1Setting.setColorBackground(#060a80);
