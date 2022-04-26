@@ -56,6 +56,16 @@ void draw() {
   stoer1 = q - mouseX;
   stoer2 = picPreDragX + mouseX;
 
+<<<<<<< Updated upstream
+=======
+  forhold = stoer2/stoer1;
+
+  
+  
+  //println(forhold);
+  //println(mouseX-750);
+
+>>>>>>> Stashed changes
   if (mouseX > 750 && mouseY > 0 && mouseX < 1920 && mouseY < 1080) {
     insideGuessField = true;
   } else insideGuessField = false;
