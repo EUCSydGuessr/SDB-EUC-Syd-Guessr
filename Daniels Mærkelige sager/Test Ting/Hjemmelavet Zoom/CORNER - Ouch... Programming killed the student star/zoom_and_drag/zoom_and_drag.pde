@@ -67,44 +67,27 @@ void mouseDragged() {
   }
 }
 
-void mouseWheel(MouseEvent spin) {
+void mouseWheel(MouseEvent spin){
   float e = spin.getCount();
   boolean borderMin = false, borderMax = false;
-
+  
   e = (e / 10)*2.5;
-
-  //Start
-  float xProcentAfvigelse = (mouseX - picPreDragX)/(1200*zoomAmount);
-  float yProcentAfvigelse = (mouseY - picPreDragY)/(1200*zoomAmount);
-
-
-  //SLUT
-
-  if (zoomAmount == 0.75) borderMin = true;
-  else if (zoomAmount == 4.0) borderMax = true;
-  else {
-    borderMin = false;
-    borderMax = false;
+  
+  if(zoomAmount == 0.75) borderMin = true;
+  else if(zoomAmount == 4.0) borderMax = true;
+  else{
+  borderMin = false;
+  borderMax = false;
   }
-
-  if (zoomAmount >= 0.75 && zoomAmount <= 4.0) {
-    if (!borderMin && !borderMax)zoomAmount = zoomAmount + e;
-    else if (borderMin && e > 0.0)zoomAmount = zoomAmount + e;
-    else if (borderMax && e < 0.0)zoomAmount = zoomAmount + e;
-  }
-
-  //Start
-  float newMusX = (mouseX * zoomAmount)*xProcentAfvigelse;
-  float newMusY = (mouseY * zoomAmount)*yProcentAfvigelse;
-
-  float musDiffX = newMusX - mouseX;
-  float musDiffY = newMusY - mouseY;
+  
+  if(zoomAmount >= 0.75 && zoomAmount <= 4.0){
+    if(!borderMin && !borderMax)zoomAmount = zoomAmount + e;
+    else if(borderMin && e > 0.0)zoomAmount = zoomAmount + e;
+    else if(borderMax && e < 0.0)zoomAmount = zoomAmount + e;
+    }
+    
    
-  picPreDragX = picPreDragX - musDiffX; 
-  picPreDragY = picPreDragY - musDiffY; 
-
-  //SLUT
-
+  
   println(e);
   println(zoomAmount);
 }
