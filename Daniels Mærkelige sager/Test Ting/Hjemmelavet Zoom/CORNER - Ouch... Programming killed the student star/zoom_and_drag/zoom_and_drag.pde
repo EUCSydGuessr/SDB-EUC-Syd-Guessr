@@ -6,6 +6,7 @@ PImage schoolMap;
 
 //imageMode(CORNER)
 float picPreDragX = 750, picPreDragY = 237;
+float xLength = 1200, yLength = 607;
 
 float picPostDragX, picPostDragY;
 
@@ -28,7 +29,7 @@ void draw() {
   rect(750, 0, 1920-750, 1080);
 
   imageMode(CORNER);
-  image(schoolMap, picPreDragX, picPreDragY, 1200*zoomAmount, 607*zoomAmount);
+  image(schoolMap, picPreDragX, picPreDragY, xLength, yLength);
 
   fill(253, 255, 218);
   rect(0, 0, 750, 1080);
@@ -67,27 +68,49 @@ void mouseDragged() {
   }
 }
 
-void mouseWheel(MouseEvent spin){
+void mouseWheel(MouseEvent spin) {
   float e = spin.getCount();
   boolean borderMin = false, borderMax = false;
-  
+
   e = (e / 10)*2.5;
-  
-  if(zoomAmount == 0.75) borderMin = true;
-  else if(zoomAmount == 4.0) borderMax = true;
-  else{
-  borderMin = false;
-  borderMax = false;
+
+  //Før start
+  float musXplacement = mouseX;
+  float musYplacement = mouseY;
+
+  float musXB4Z = (musXplacement - picPreDragX) * zoomAmount;
+  float musYB4Z = (musYplacement - picPreDragY) * zoomAmount;
+  //slut
+
+  if (zoomAmount == 0.75) borderMin = true;
+  else if (zoomAmount == 4.0) borderMax = true;
+  else {
+    borderMin = false;
+    borderMax = false;
   }
-  
-  if(zoomAmount >= 0.75 && zoomAmount <= 4.0){
-    if(!borderMin && !borderMax)zoomAmount = zoomAmount + e;
-    else if(borderMin && e > 0.0)zoomAmount = zoomAmount + e;
-    else if(borderMax && e < 0.0)zoomAmount = zoomAmount + e;
-    }
-    
-   
-  
+
+  if (zoomAmount >= 0.75 && zoomAmount <= 4.0) {
+    if (!borderMin && !borderMax)zoomAmount = zoomAmount + e;
+    else if (borderMin && e > 0.0)zoomAmount = zoomAmount + e;
+    else if (borderMax && e < 0.0)zoomAmount = zoomAmount + e;
+  }
+
+  xLength = 1200*zoomAmount;
+  yLength = 607*zoomAmount;
+
+
+  //Efter start
+  musXplacement = mouseX;
+  musYplacement = mouseY;
+
+  float musXafterZ = (musXplacement - picPreDragX) * zoomAmount;
+  float musYafterZ = (musYplacement - picPreDragY) * zoomAmount;
+
+  picPreDragX += (musXB4Z - musXafterZ);
+  picPreDragY += (musYB4Z - musYafterZ);
+
+  //slut
+
   println(e);
   println(zoomAmount);
 }
