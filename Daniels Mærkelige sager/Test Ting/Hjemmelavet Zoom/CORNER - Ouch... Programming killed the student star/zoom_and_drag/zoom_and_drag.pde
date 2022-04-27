@@ -1,9 +1,6 @@
 //Initiering:
 PImage schoolMap;
 
-//imageMode(CENTER)
-//float picPreDragX = 1335, picPreDragY = 540;
-
 //imageMode(CORNER)
 float picPreDragX = 750, picPreDragY = 237;
 float xLength = 1200, yLength = 607;
@@ -83,6 +80,9 @@ void mouseWheel(MouseEvent spin) {
 
   float musXB4Z = (musXplacement - picPreDragX)*zoomAmount;
   float musYB4Z = (musYplacement - picPreDragY)*zoomAmount;
+  
+  float procentAfvigelseX = (musXplacement - picPreDragX)/(1200*zoomAmount);
+    float procentAfvigelseY = (musYplacement - picPreDragY)/(1200*zoomAmount);
   //slut
 
   if (zoomAmount == 0.75) borderMin = true;
@@ -103,17 +103,15 @@ void mouseWheel(MouseEvent spin) {
 
 
   //Efter start
-  musXplacement = mouseX;
-  musYplacement = mouseY;
+  float musXafterZ = (musXplacement - picPreDragX)*zoomAmount;
+  float musYafterZ = (musYplacement - picPreDragY)*zoomAmount;
 
-  float musXafterZ = (musXplacement - picPreDragX) * zoomAmount;
-  float musYafterZ = (musYplacement - picPreDragY) * zoomAmount;
 
   picPreDragX += (musXB4Z - musXafterZ);
   picPreDragY += (musYB4Z - musYafterZ);
 
-  //slut
 
-  println(e);
+
+ // println(e);
   println(zoomAmount);
 }
