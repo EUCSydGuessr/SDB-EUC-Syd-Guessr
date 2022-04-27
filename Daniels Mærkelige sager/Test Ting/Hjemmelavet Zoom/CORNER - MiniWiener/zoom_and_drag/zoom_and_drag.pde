@@ -15,8 +15,6 @@ float zoomAmount = 1.0;
 boolean insideGuessField = false;
 
 
-
-
 void setup() {
   size(1920, 1080);
   background(253, 255, 218);
@@ -65,7 +63,6 @@ void draw() {
 
 void mouseDragged() {
   if (insideGuessField) {
-
     picPreDragX = mouseX-picPostDragX;
     picPreDragY = mouseY-picPostDragY;
   }
@@ -81,25 +78,31 @@ void mouseWheel(MouseEvent spin) {
   float musXplacement = mouseX;
   float musYplacement = mouseY;
 
-  float musXB4Z = (musXplacement - picPreDragX)*zoomAmount;
-  float musYB4Z = (musYplacement - picPreDragY)*zoomAmount;
+  float musXB4Z = (musXplacement - picPreDragX) * zoomAmount;
+  float musYB4Z = (musYplacement - picPreDragY) * zoomAmount;
   //slut
 
+  /*
   if (zoomAmount == 0.75) borderMin = true;
-  else if (zoomAmount == 4.0) borderMax = true;
-  else {
-    borderMin = false;
-    borderMax = false;
-  }
+   else if (zoomAmount == 4.0) borderMax = true;
+   else {
+   borderMin = false;
+   borderMax = false;
+   }
+   
+   if (zoomAmount >= 0.75 && zoomAmount <= 4.0) {
+   if (!borderMin && !borderMax)zoomAmount = zoomAmount + e;
+   else if (borderMin && e > 0.0)zoomAmount = zoomAmount + e;
+   else if (borderMax && e < 0.0)zoomAmount = zoomAmount + e;
+   }
+   */
 
-  if (zoomAmount >= 0.75 && zoomAmount <= 4.0) {
-    if (!borderMin && !borderMax)zoomAmount = zoomAmount + e;
-    else if (borderMin && e > 0.0)zoomAmount = zoomAmount + e;
-    else if (borderMax && e < 0.0)zoomAmount = zoomAmount + e;
-  }
+  if (e > 0)zoomAmount *= 1.25;
+  else if (e<0)zoomAmount *= 0.75;
 
-  xLength = 1200*zoomAmount;
-  yLength = 607*zoomAmount;
+
+  xLength = xLength*zoomAmount;
+  yLength = yLength*zoomAmount;
 
 
   //Efter start
