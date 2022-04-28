@@ -78,11 +78,18 @@ void mouseWheel(MouseEvent spin) {
   float musXplacement = mouseX;
   float musYplacement = mouseY;
 
+  float musDiffX = (musXplacement - picPreDragX)/zoomAmount;
+  float musDiffY = (musYplacement - picPreDragY)/zoomAmount;
+
+
+  float musXB4ZTest = musDiffX * zoomAmount;
+  float musYB4ZTest = musDiffY * zoomAmount;
+
+
   float musXB4Z = (musXplacement - picPreDragX)*zoomAmount;
   float musYB4Z = (musYplacement - picPreDragY)*zoomAmount;
   
-  float procentAfvigelseX = (musXplacement - picPreDragX)/(1200*zoomAmount);
-    float procentAfvigelseY = (musYplacement - picPreDragY)/(1200*zoomAmount);
+
   //slut
 
   if (zoomAmount == 0.75) borderMin = true;
@@ -106,9 +113,12 @@ void mouseWheel(MouseEvent spin) {
   float musXafterZ = (musXplacement - picPreDragX)*zoomAmount;
   float musYafterZ = (musYplacement - picPreDragY)*zoomAmount;
 
+  float musXafterZTest = musDiffX*zoomAmount;
+  float musYafterZTest = musDiffY*zoomAmount;
 
-  picPreDragX += (musXB4Z - musXafterZ);
-  picPreDragY += (musYB4Z - musYafterZ);
+  
+  picPreDragX += (musXB4ZTest - musXafterZTest);
+  picPreDragY += (musYB4ZTest - musYafterZTest);
 
 
 
