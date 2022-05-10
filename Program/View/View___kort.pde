@@ -14,6 +14,16 @@ Button Knap1Setting;
 Button Knap2Setting;
 Button Knap3Setting;
 
+
+int musx = 0;
+int musy = 0;
+int forskelx = 0;
+int forskely = 0;
+
+int realx = 1248;
+int realy = 520;
+
+
 //Al initiering og navngivning af diverse.
 
 void setup() {
@@ -60,7 +70,7 @@ void draw() {
   textAlign(CENTER, CENTER);
   text(guessButton, 200, 530, 350, 120);
 
-  println(etage);
+  //println(etage);
 
   //kort 
   imgEtagebillede = loadImage(sal+".png");
@@ -72,9 +82,9 @@ void draw() {
 
 
 
-
+// Kort forste sal
 public void Forste_sal() {
-  println("1ste knap pressed");
+  //println("1ste knap pressed");
 
   fill(255);
   rect(1000, 400, 600, 450);
@@ -89,9 +99,9 @@ public void Forste_sal() {
 }
 // Hvad sker der når jeg trykker.
 
-
+// Kort stueetage
 public void Stueetage() {
-  println("2nden knap pressed ");
+  //println("2nden knap pressed ");
 
   fill(255);
   rect(1000, 400, 600, 450);
@@ -104,8 +114,9 @@ public void Stueetage() {
   Knap3Setting.setColorBackground(#060a80);
 }
 
+// Kort kælder
 public void Kaelder() {
-  println("NILS ER PÅ SKÆRMEN");
+  //println("NILS ER PÅ SKÆRMEN");
 
   fill(255);
   rect(1000, 400, 600, 450);
@@ -117,4 +128,40 @@ public void Kaelder() {
   Knap3Setting.setColorBackground(#252dfa);
   Knap1Setting.setColorBackground(#060a80);
   Knap2Setting.setColorBackground(#060a80);
+}
+
+
+
+
+// Scoreprogram
+void mousePressed() {
+  if (mouseButton == LEFT) {
+    musx = mouseX;
+    musy = mouseY;
+    println("Her "+musx+" Også her "+musy);
+  }
+  if (mouseButton == RIGHT) {
+    if (realx > musx) { 
+      forskelx = realx - musx;
+      println("Forskelx< = "+forskelx);
+    } else if (musx > realx) {
+      forskelx = musx - realx;
+      println("Forskelx> = "+forskelx);
+    }
+
+    if (realy > musy) { 
+      forskely = realy - musy;
+      println("Forskely< = "+forskely);
+    } else if (musy > realy) {
+      forskely = musy - realy;
+      println("Forskely> = "+forskely);
+    }
+    int under_rods_gutten = int(pow(forskelx, 2)) + int(pow(forskely, 2));
+    int rod = int(sqrt(under_rods_gutten));    
+
+    int score = 500 - rod;
+    if (score < 0)score = 0; 
+
+    println("Din score er "+score);
+  }
 }
