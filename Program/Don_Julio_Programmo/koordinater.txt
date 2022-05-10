@@ -1,0 +1,13 @@
+
+1 sal glasgang - (406 , 375)
+1 sal kantinetrappe1 - (455 , 204)
+1 sal kantinetrappe2 - (405 , 160)
+
+Stue kantinekontor - (459 , 218)
+Stue vaeksted - (349 , 117)
+Stue 1steG - (352 , 366)
+
+Kaelder valle - (367 , 343)
+Kaelder gangsy - (478 , 375)
+Kaelder cykelkaelder - (433 , 223)
+Kaelder vallesgang - (355 , 359)
