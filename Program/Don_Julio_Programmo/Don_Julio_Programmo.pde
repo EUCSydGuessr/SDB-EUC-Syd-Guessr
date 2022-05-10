@@ -51,7 +51,7 @@ void setup() {
   pic9 = new RandomBillede(606, 267, 2, "Pics After/1steG1.jpg");
   pic9 = new RandomBillede(606, 267, 2, "Pics After/1steG1.jpg");
 
-
+// ÆNDRE KOORDINATER... SVIN!
 
   cp5 = new ControlP5(this);
 
