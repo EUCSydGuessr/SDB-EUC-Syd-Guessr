@@ -85,8 +85,6 @@ void setup() {
   pic8 = new RandomBillede(1364, 636, 1, "Pics After/VallesKaelder.jpg");
   pic9 = new RandomBillede(1476, 675, 1, "Pics After/SyKaelderTrappe.jpg");
   pic10 = new RandomBillede(1355, 655, 1, "Pics After/VallesGang1.jpg");
-
-  // ÆNDRE KOORDINATER... SVIN!
   pic11 = new RandomBillede(1361, 570, 2, "Pics After/MidterGang 1.jpg");
   pic12 = new RandomBillede(1303, 509, 2, "Pics After/FaverihallenEndevæg.jpg");
   pic13 = new RandomBillede(1354, 571, 1, "Pics After/KælderTrappeOp.jpg");
@@ -108,7 +106,7 @@ void setup() {
   PFont smallFont = createFont("Bahnschrift", 14);
   fontSmallButt = new ControlFont(smallFont);
 
-  PFont bigFont = createFont("", 40);
+  PFont bigFont = createFont("Bahnschrift",50);
   fontBigButt = new ControlFont(bigFont);
 
   //Initiering af knapindstillinger 
@@ -414,6 +412,10 @@ void draw() {
     textSize(45);
     textAlign(CENTER, CENTER);
     text(actualScore, 375, 735);
+
+    if (faktiskEtage == 1)Knap3Setting.setColorBackground(#04d119);
+    if (faktiskEtage == 2)Knap2Setting.setColorBackground(#04d119);
+    if (faktiskEtage == 3)Knap1Setting.setColorBackground(#04d119);
   }
   stroke(0);
   fill(0);
@@ -425,8 +427,8 @@ void draw() {
     fill(255);
     text("Game Over", 375, 275);
   }
-  
-  image(kompas,1800,960);
+
+  image(kompas, 1800, 960);
 }
 
 
@@ -466,7 +468,6 @@ public void Guess() {
 
     String totalScoreToScreen = str(totalScore);
     totalScoreText = "Total Score: " + totalScoreToScreen;
-
 
     Knap4Setting.hide();
     Knap5Setting.show();
@@ -508,6 +509,13 @@ public void Next() {
   tegnBillede = true;
 
   runde++;
+
+  Knap1Setting.setColorBackground(#060a80);
+  Knap2Setting.setColorBackground(#060a80);
+  Knap3Setting.setColorBackground(#060a80);
+  if (etage == 1)Knap3Setting.setColorBackground(#252dfa);
+  if (etage == 2)Knap2Setting.setColorBackground(#252dfa);
+  if (etage == 3)Knap1Setting.setColorBackground(#252dfa);
 
   println("Du er lige startet på runde " + runde);
   println("Game is done = " + gameDone);
