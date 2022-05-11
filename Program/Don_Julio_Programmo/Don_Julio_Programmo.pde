@@ -15,7 +15,8 @@ Button Knap6Setting;
 int etage = 2;
 
 //Billede skaber
-RandomBillede pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10;
+RandomBillede pic1, pic2, pic3, pic4, pic5, pic6, pic7, pic8, pic9, pic10, pic11, pic12, pic13, 
+  pic14, pic15, pic16, pic17, pic18, pic19, pic20, pic21, pic22, pic23, pic24, pic25;
 int q = 0;
 int pStop = 0, p1 = 99, p2 = 99, p3 = 99, p4 = 99;
 
@@ -72,18 +73,33 @@ void setup() {
   background(253, 255, 218);
 
   //Indstilling af billeder
-  pic1 = new RandomBillede(1406, 675, 3, "Pics After/Glasgang.jpg");
-  pic2 = new RandomBillede(1455, 504, 3, "Pics After/KantineTrappe1.jpg");
-  pic3 = new RandomBillede(1405, 460, 3, "Pics After/KantineTrappe2.jpg");
-  pic4 = new RandomBillede(1459, 518, 2, "Pics After/KantineKontorDoor.jpg");
-  pic5 = new RandomBillede(1349, 417, 2, "Pics After/Vaerksted1.jpg");
-  pic6 = new RandomBillede(1352, 666, 2, "Pics After/1steG1.jpg");
-  pic7 = new RandomBillede(1433, 523, 1, "Pics After/CykelKaelder.jpg");
-  pic8 = new RandomBillede(1367, 643, 1, "Pics After/VallesKaelder.jpg");
-  pic9 = new RandomBillede(1478, 675, 1, "Pics After/SyKaelderTrappe.jpg");
-  pic10 = new RandomBillede(1355, 659, 1, "Pics After/VallesGang1.jpg");
+  pic1 = new RandomBillede(1411, 675, 3, "Pics After/Glasgang.jpg");
+  pic2 = new RandomBillede(1457, 502, 3, "Pics After/KantineTrappe1.jpg");
+  pic3 = new RandomBillede(1406, 461, 3, "Pics After/KantineTrappe2.jpg");
+  pic4 = new RandomBillede(1460, 517, 2, "Pics After/KantineKontorDoor.jpg");
+  pic5 = new RandomBillede(1375, 423, 2, "Pics After/Værksted.jpg");
+  pic6 = new RandomBillede(1360, 665, 2, "Pics After/1steG1.jpg");
+  pic7 = new RandomBillede(1441, 521, 1, "Pics After/CykelKaelder.jpg");
+  pic8 = new RandomBillede(1364, 636, 1, "Pics After/VallesKaelder.jpg");
+  pic9 = new RandomBillede(1476, 675, 1, "Pics After/SyKaelderTrappe.jpg");
+  pic10 = new RandomBillede(1355, 655, 1, "Pics After/VallesGang1.jpg");
 
   // ÆNDRE KOORDINATER... SVIN!
+  pic11 = new RandomBillede(1361, 570, 2, "Pics After/MidterGang 1.jpg");
+  pic12 = new RandomBillede(1303, 509, 2, "Pics After/FaverihallenEndevæg.jpg");
+  pic13 = new RandomBillede(1354, 571, 1, "Pics After/KælderTrappeOp.jpg");
+  pic14 = new RandomBillede(1369, 595, 2, "Pics After/LærerBibliotek.jpg");
+  pic15 = new RandomBillede(1369, 659, 2, "Pics After/1steGIndgang.jpg");
+  pic16 = new RandomBillede(1354, 662, 3, "Pics After/1SalBordtennisFriRum.jpg");
+  pic17 = new RandomBillede(1356, 656, 3, "Pics After/1SalGang1.jpg");
+  pic18 = new RandomBillede(1381, 642, 3, "Pics After/Laboratorie.jpg");
+  pic19 = new RandomBillede(1356, 595, 3, "Pics After/1SalGang2.jpg");
+  pic20 = new RandomBillede(1372, 533, 3, "Pics After/UdTilKantine.jpg");
+  pic21 = new RandomBillede(1367, 453, 2, "Pics After/Kantine.jpg");
+  pic22 = new RandomBillede(1338, 543, 2, "Pics After/FaverihallenIndgang.jpg");
+  pic23 = new RandomBillede(1337, 538, 2, "Pics After/FaverihallenGang.jpg");
+  pic24 = new RandomBillede(1355, 569, 3, "Pics After/1SalGangTrappe.jpg");
+  pic25 = new RandomBillede(1298, 505, 2, "Pics After/IndgangSyd.jpg");
 
   cp5 = new ControlP5(this);
 
@@ -105,7 +121,6 @@ void setup() {
   Knap5Setting = cp5.addButton("Next").setPosition(100, 550).setSize(550, 100).setFont(fontBigButt).setColorBackground(#077eda).setVisible(false);
 
   Knap6Setting = cp5.addButton("Restart").setPosition(100, 550).setSize(550, 100).setFont(fontBigButt).setColorBackground(#077eda).setVisible(false);
-
 }
 
 
@@ -172,7 +187,7 @@ void draw() {
 
   //Billede på skærm
   while (q <= 0 & pStop <= 4) {
-    q = q + int(random(1, 11));
+    q = q + int(random(1, 26));
     if (q == p1) q = 0;
     if (q == p2) q = 0;
     if (q == p3) q = 0;
@@ -260,6 +275,126 @@ void draw() {
     if (tegnBillede == true) {
       xPunkt = pic10.xbillede;
       yPunkt = pic10.ybillede;
+      tegnBillede = false;
+    }
+  } else if (q == 11) {
+    pic11.drawIMG(); 
+    faktiskEtage = pic11.etageTal; 
+    if (tegnBillede == true) {
+      xPunkt = pic11.xbillede;
+      yPunkt = pic11.ybillede;
+      tegnBillede = false;
+    }
+  } else if (q == 12) {
+    pic12.drawIMG(); 
+    faktiskEtage = pic12.etageTal; 
+    if (tegnBillede == true) {
+      xPunkt = pic12.xbillede;
+      yPunkt = pic12.ybillede;
+      tegnBillede = false;
+    }
+  } else if (q == 13) {
+    pic13.drawIMG(); 
+    faktiskEtage = pic13.etageTal; 
+    if (tegnBillede == true) {
+      xPunkt = pic13.xbillede;
+      yPunkt = pic13.ybillede;
+      tegnBillede = false;
+    }
+  } else if (q == 14) {
+    pic14.drawIMG(); 
+    faktiskEtage = pic14.etageTal; 
+    if (tegnBillede == true) {
+      xPunkt = pic14.xbillede;
+      yPunkt = pic14.ybillede;
+      tegnBillede = false;
+    }
+  } else if (q == 15) {
+    pic15.drawIMG(); 
+    faktiskEtage = pic15.etageTal; 
+    if (tegnBillede == true) {
+      xPunkt = pic15.xbillede;
+      yPunkt = pic15.ybillede;
+      tegnBillede = false;
+    }
+  } else if (q == 16) {
+    pic16.drawIMG(); 
+    faktiskEtage = pic16.etageTal; 
+    if (tegnBillede == true) {
+      xPunkt = pic16.xbillede;
+      yPunkt = pic16.ybillede;
+      tegnBillede = false;
+    }
+  } else if (q == 17) {
+    pic17.drawIMG(); 
+    faktiskEtage = pic17.etageTal; 
+    if (tegnBillede == true) {
+      xPunkt = pic17.xbillede;
+      yPunkt = pic17.ybillede;
+      tegnBillede = false;
+    }
+  } else if (q == 18) {
+    pic18.drawIMG(); 
+    faktiskEtage = pic18.etageTal; 
+    if (tegnBillede == true) {
+      xPunkt = pic18.xbillede;
+      yPunkt = pic18.ybillede;
+      tegnBillede = false;
+    }
+  } else if (q == 19) {
+    pic19.drawIMG(); 
+    faktiskEtage = pic19.etageTal; 
+    if (tegnBillede == true) {
+      xPunkt = pic19.xbillede;
+      yPunkt = pic19.ybillede;
+      tegnBillede = false;
+    }
+  } else if (q == 20) {
+    pic20.drawIMG(); 
+    faktiskEtage = pic20.etageTal; 
+    if (tegnBillede == true) {
+      xPunkt = pic20.xbillede;
+      yPunkt = pic20.ybillede;
+      tegnBillede = false;
+    }
+  } else if (q == 21) {
+    pic21.drawIMG(); 
+    faktiskEtage = pic21.etageTal; 
+    if (tegnBillede == true) {
+      xPunkt = pic21.xbillede;
+      yPunkt = pic21.ybillede;
+      tegnBillede = false;
+    }
+  } else if (q == 22) {
+    pic22.drawIMG(); 
+    faktiskEtage = pic22.etageTal; 
+    if (tegnBillede == true) {
+      xPunkt = pic22.xbillede;
+      yPunkt = pic22.ybillede;
+      tegnBillede = false;
+    }
+  } else if (q == 23) {
+    pic23.drawIMG(); 
+    faktiskEtage = pic23.etageTal; 
+    if (tegnBillede == true) {
+      xPunkt = pic23.xbillede;
+      yPunkt = pic23.ybillede;
+      tegnBillede = false;
+    }
+  } else if (q == 24) {
+    pic24.drawIMG(); 
+    faktiskEtage = pic24.etageTal; 
+    if (tegnBillede == true) {
+      xPunkt = pic24.xbillede;
+      yPunkt = pic24.ybillede;
+      tegnBillede = false;
+    }
+  } else if (q == 25) {
+    pic25.drawIMG(); 
+    faktiskEtage = pic25.etageTal; 
+    if (tegnBillede == true) {
+      xPunkt = pic25.xbillede;
+      yPunkt = pic25.ybillede;
       tegnBillede = false;
     }
   }
@@ -369,37 +504,34 @@ public void Next() {
   tegnBillede = true;
 
   runde++;
-      
+
   println("Du er lige startet på runde " + runde);
   println("Game is done = " + gameDone);
-  
 }
 
-public void Restart(){
+public void Restart() {
   totalScore = 0;
   runde = 1;
   gameColor = 255;
-      
+
   p1 = 99;
   p2 = 99;
   p3 = 99;
   p4 = 99;
   pStop = 0;
-  
+
   q = 0;
-  
+
   ringPlacementX = 0;
   ringPlacementY = 0;
   ringPlaced = false;
   guessMade = false;
   tegnBillede = true;
-  
+
   gameDone = false;
 
   Knap6Setting.hide();
   Knap4Setting.show();
-  
-
 }
 
 //Hvad gør den første knap:
