@@ -22,6 +22,7 @@ int pStop = 0, p1 = 99, p2 = 99, p3 = 99, p4 = 99;
 
 //Etage billeder
 PImage imgEtagebillede;
+PImage kompas;
 
 String sal = "Stue";
 
@@ -71,6 +72,7 @@ int runde = 1;
 void setup() {
   size(1920, 1080);
   background(253, 255, 218);
+  kompas = loadImage("Kompas.png");
 
   //Indstilling af billeder
   pic1 = new RandomBillede(1411, 675, 3, "Pics After/Glasgang.jpg");
@@ -423,6 +425,8 @@ void draw() {
     fill(255);
     text("Game Over", 375, 275);
   }
+  
+  image(kompas,1800,960);
 }
 
 
