@@ -10,6 +10,7 @@ Button Knap2Setting;
 Button Knap3Setting;
 Button Knap4Setting;
 Button Knap5Setting;
+Button Knap6Setting;
 
 int etage = 2;
 
@@ -41,6 +42,8 @@ float ringSize = 10;
 boolean ringPlaced = false;
 boolean guessMade = false;
 
+boolean etageChangeArea = false;
+
 //Faktisk punkt
 float xPunkt = 0, yPunkt = 0;
 float faktiskPunktPlacementX = 0, faktiskPunktPlacementY = 0;
@@ -59,7 +62,7 @@ String totalScoreText = "";
 //EndGame
 boolean gameDone = false;
 int gameColor = 255;
-  
+
 int runde = 1;
 
 
@@ -91,15 +94,18 @@ void setup() {
   fontBigButt = new ControlFont(bigFont);
 
   //Initiering af knapindstillinger 
-  Knap1Setting = cp5.addButton("Forste_sal").setLabel("Første Sal").setPosition(950, 275).setSize(100, 30).setFont(fontSmallButt).setColorBackground(#060a80).setColorActive(#252dfa).updateSize();
+  Knap1Setting = cp5.addButton("Forste_sal").setLabel("Første Sal").setPosition(770, 50).setSize(100, 30).setFont(fontSmallButt).setColorBackground(#060a80).setColorActive(#252dfa).updateSize();
 
-  Knap2Setting = cp5.addButton("Stueetage").setPosition(950, 300).setSize(100, 30).setFont(fontSmallButt).setColorBackground(#252dfa).setColorActive(#252dfa).updateSize();
+  Knap2Setting = cp5.addButton("Stueetage").setPosition(770, 90).setSize(100, 30).setFont(fontSmallButt).setColorBackground(#252dfa).setColorActive(#252dfa).updateSize();
 
-  Knap3Setting = cp5.addButton("Kaelder").setLabel("Kælder").setPosition(950, 325).setSize(100, 30).setFont(fontSmallButt).setColorBackground(#060a80).setColorActive(#252dfa).updateSize();
+  Knap3Setting = cp5.addButton("Kaelder").setLabel("Kælder").setPosition(770, 130).setSize(100, 30).setFont(fontSmallButt).setColorBackground(#060a80).setColorActive(#252dfa).updateSize();
 
   Knap4Setting = cp5.addButton("Guess").setPosition(100, 550).setSize(550, 100).setFont(fontBigButt).setColorBackground(#077eda);
 
   Knap5Setting = cp5.addButton("Next").setPosition(100, 550).setSize(550, 100).setFont(fontBigButt).setColorBackground(#077eda).setVisible(false);
+
+  Knap6Setting = cp5.addButton("Restart").setPosition(100, 550).setSize(550, 100).setFont(fontBigButt).setColorBackground(#077eda).setVisible(false);
+
 }
 
 
@@ -148,6 +154,10 @@ void draw() {
   if (mouseX > 750 && mouseY > 0 && mouseX < 1920 && mouseY < 1080) {
     insideGuessField = true;
   } else insideGuessField = false;
+
+  if (mouseX > 750 && mouseY > 0 && mouseX < 890 && mouseY < 180) {
+    etageChangeArea = true;
+  } else etageChangeArea = false;
 
   picPostDragX = mouseX-picPreDragX;
   picPostDragY = mouseY-picPreDragY;
@@ -273,17 +283,16 @@ void draw() {
   textSize(45);
   textAlign(CENTER, CENTER);
   text(totalScoreText, 375, 680);
-  
-  if(gameDone == true){
-  fill(255);
-    text("Game Over", 375,275);
-  
+
+  if (gameDone == true) {
+    fill(255);
+    text("Game Over", 375, 275);
   }
 }
 
 
 void mouseClicked() {
-  if (mouseButton == LEFT) if (insideGuessField == true)if (guessMade == false) {
+  if (mouseButton == LEFT && insideGuessField == true && guessMade == false && etageChangeArea == false) {
     ringPlacementX = mouseX;
     ringPlacementY = mouseY;
     ringPlaced = true;
@@ -328,11 +337,11 @@ public void Guess() {
 }
 
 public void Next() {
-  if(runde == 5){
-   gameDone = true;
-   gameColor = 0;
+  if (runde == 5) {
+    gameDone = true;
+    gameColor = 0;
   }
-  
+
   if (p1 == 99) p1 = q;
   else if (p2 == 99) p2 = q;
   else if (p3 == 99) p3 = q;
@@ -342,7 +351,8 @@ public void Next() {
   pStop = pStop + 1;
 
   Knap5Setting.hide();
-  if(gameDone == false) Knap4Setting.show();
+  if (gameDone == false) Knap4Setting.show();
+  if (gameDone == true)   Knap6Setting.show();
 
   picPreDragX = 1000;
   picPreDragY = 300;
@@ -357,14 +367,39 @@ public void Next() {
   ringPlaced = false;
   guessMade = false;
   tegnBillede = true;
-  
 
-  
-  
   runde++;
-  
+      
   println("Du er lige startet på runde " + runde);
   println("Game is done = " + gameDone);
+  
+}
+
+public void Restart(){
+  totalScore = 0;
+  runde = 1;
+  gameColor = 255;
+      
+  p1 = 99;
+  p2 = 99;
+  p3 = 99;
+  p4 = 99;
+  pStop = 0;
+  
+  q = 0;
+  
+  ringPlacementX = 0;
+  ringPlacementY = 0;
+  ringPlaced = false;
+  guessMade = false;
+  tegnBillede = true;
+  
+  gameDone = false;
+
+  Knap6Setting.hide();
+  Knap4Setting.show();
+  
+
 }
 
 //Hvad gør den første knap:
