@@ -59,7 +59,7 @@ int totalScore = 0;
 int faktiskEtage = 0;
 int etageGuess = 0;
 String actualScore = "";
-String totalScoreText = "";
+String totalScoreText = "Total Score: 0";
 
 //EndGame
 boolean gameDone = false;
@@ -155,16 +155,6 @@ void draw() {
   fill (gameColor);
   rect(50, 50, 650, 450);
 
-  /*
-  stroke(7, 126, 218);
-   fill(255);
-   String guessButton = "Guess";
-   textSize(100);
-   textAlign(CENTER, CENTER);
-   text(guessButton, 200, 530, 350, 120);
-   */
-
-
   //Zoom mus lokation
   if (mouseX > 750 && mouseY > 0 && mouseX < 1920 && mouseY < 1080) {
     insideGuessField = true;
@@ -183,8 +173,6 @@ void draw() {
   faktiskPunktPostPlacementX = mouseX-xPunkt;
   faktiskPunktPostPlacementY = mouseY-yPunkt;
 
-
-
   //Billede på skærm
   while (q <= 0 & pStop <= 4) {
     q = q + int(random(1, 26));
@@ -196,7 +184,7 @@ void draw() {
     println("Billedet der er valgt er "+q+" og p er "+p1+" "+p2+" "+p3+" "+p4);
   }
 
-
+//Tegner det aktive billede og skaffer informationen fra dette billede.
   if (q == 1) {
     pic1.drawIMG(); 
     faktiskEtage = pic1.etageTal; 
@@ -399,6 +387,7 @@ void draw() {
     }
   }
 
+//Visuelt stuff, der ændrer sig efter man har gættet.
   if (guessMade == true) {
     strokeWeight(4);
     stroke(255, 0, 0);
@@ -411,7 +400,7 @@ void draw() {
     fill(0);
     textSize(45);
     textAlign(CENTER, CENTER);
-    text(actualScore, 375, 735);
+    text(actualScore, 375, 790);
 
     if (faktiskEtage == 1)Knap3Setting.setColorBackground(#04d119);
     if (faktiskEtage == 2)Knap2Setting.setColorBackground(#04d119);
@@ -427,7 +416,7 @@ void draw() {
     fill(255);
     text("Game Over", 375, 275);
   }
-  
+
   String rundeTekst = "Runde: " + runde + "/5";
   if (runde <= 5) {
     rundeTekst = "Runde: " + runde + "/5";
@@ -437,7 +426,7 @@ void draw() {
   fill(0);
   textSize(45);
   textAlign(CENTER, CENTER);
-  text(rundeTekst, 375, 790);
+  text(rundeTekst, 375, 735);
   image(kompas, 1800, 960);
 }
 
@@ -450,6 +439,7 @@ void mouseClicked() {
     etageGuess = etage;
   }
 }
+
 
 //Hvad gør Guess-knappen:
 public void Guess() {
@@ -472,7 +462,6 @@ public void Guess() {
 
     totalScore += score;
 
-
     String scoreToScreen = str(score);
     actualScore = "Din score i denne runde er: " + scoreToScreen;
 
@@ -485,6 +474,7 @@ public void Guess() {
     println(totalScore);
   }
 }
+
 
 public void Next() {
   if (runde == 5) {
@@ -531,6 +521,7 @@ public void Next() {
   println("Game is done = " + gameDone);
 }
 
+
 public void Restart() {
   totalScore = 0;
   runde = 1;
@@ -555,6 +546,7 @@ public void Restart() {
   Knap6Setting.hide();
   Knap4Setting.show();
 }
+
 
 //Hvad gør den første knap:
 public void Forste_sal() {
@@ -585,6 +577,7 @@ public void Stueetage() {
   Knap3Setting.setColorBackground(#060a80);
 }
 
+
 //Hvad gør den tredje knap:
 public void Kaelder() {
   println("Kælder er aktiv");
@@ -614,6 +607,7 @@ void mouseDragged() {
     yPunkt = mouseY-faktiskPunktPostPlacementY;
   }
 }
+
 
 void mouseWheel(MouseEvent spin) {
   if (insideGuessField) {
