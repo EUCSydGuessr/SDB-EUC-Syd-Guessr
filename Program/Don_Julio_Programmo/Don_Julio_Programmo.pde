@@ -106,7 +106,7 @@ void setup() {
   PFont smallFont = createFont("Bahnschrift", 14);
   fontSmallButt = new ControlFont(smallFont);
 
-  PFont bigFont = createFont("Bahnschrift",50);
+  PFont bigFont = createFont("Bahnschrift", 50);
   fontBigButt = new ControlFont(bigFont);
 
   //Initiering af knapindstillinger 
@@ -427,7 +427,17 @@ void draw() {
     fill(255);
     text("Game Over", 375, 275);
   }
+  
+  String rundeTekst = "Runde: " + runde + "/5";
+  if (runde <= 5) {
+    rundeTekst = "Runde: " + runde + "/5";
+  } else if (runde > 5)rundeTekst = "Runde: 5/5";
 
+  stroke(0);
+  fill(0);
+  textSize(45);
+  textAlign(CENTER, CENTER);
+  text(rundeTekst, 375, 790);
   image(kompas, 1800, 960);
 }
 
